@@ -83,7 +83,7 @@ const urlSchema = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%2
   }
   //错误统一通知  领取 未种植 错误
   if ($.isNode() && error_msg) {
-    await notify.sendNotify(`【提示】以下用户有需要处理任务`, `${error_msg}`)
+    await notify.sendNotify(`【提示】以下用户有需要处理任务\n`, `${error_msg}`)
   }
 
 })()
