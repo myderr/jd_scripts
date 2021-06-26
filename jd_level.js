@@ -26,7 +26,9 @@ let cookiesArr = [], cookie = '', notify, allMessage = '', error_msg = '';
       console.log(`\n开始【京东账号${$.index}】${$.nickName || $.UserName}\n`);
       await GetLevel();
       if ($.userScore) {
-        allMessage += `【京东账号${$.index}】${$.nickName || $.UserName}\n京享值：${$.userScore.score}\n信誉等级:${$.userScore.creditLevel}\n\n`;
+        var msg = `【京东账号${$.index}】${$.nickName || $.UserName}\n京享值：${$.userScore.score}\n信誉等级:${$.userScore.creditLevel}\n\n`;
+        console.log(msg)
+        allMessage += msg;
       }
       if (!$.isLogin) {
         if ($.isNode()) {
@@ -36,7 +38,7 @@ let cookiesArr = [], cookie = '', notify, allMessage = '', error_msg = '';
       }
     }
   }
-  if ($.isNode() && allMessage && $.ctrTemp) {
+  if ($.isNode() && allMessage) {
     allMessage += `信誉等级最高11,以下为半黑，5以下全黑。指标仅供参考\n\n`
     await notify.sendNotify(`${$.name}`, `${allMessage}`)
   }
