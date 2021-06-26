@@ -5,7 +5,7 @@ creditLevel，最高11级，低于8的抢啥都很难，低于5的就不要抢�
 ==========================Quantumultx=========================
 [task_local]
 #jd等级
-5 6-18/6 * * * jd_level.js
+5 1 9 1/10 * * jd_level.js
 */
 const $ = new Env('京东等级');
 let cookiesArr = [], cookie = '', notify, allMessage = '', error_msg = '';
